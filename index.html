@@ -265,8 +265,13 @@ strong { font-weight: 700; color: var(--ink); }
 .pub {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13.5px; font-weight: 700; color: var(--accent);
-  padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--chip);
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--chip);
+  text-decoration: none; transition: border-color .2s, transform .15s;
 }
+.pub:hover { border-color: var(--accent); transform: translateY(-1px); }
+.pub svg { width: 15px; height: 15px; }
+.project p.paper { font-size: 14.5px; }
+.project p.paper em { color: var(--ink); }
 @media (max-width: 840px) {
   .project { grid-template-columns: 1fr; padding: 22px; gap: 22px; }
 }
@@ -489,7 +494,10 @@ footer .mono { font-family: var(--f-mono); font-size: 12px; }
             <div class="made">Made with: <span class="tag">PyTorch</span><span class="tag">Python</span><span class="tag">Statistics</span></div>
             <p>Group research project, Shanghai, Jul – Aug 2022. Implemented <strong>PyTorch models</strong> with propensity and statistical techniques to study <strong>how fake news spreads on social media</strong>, alongside clustering and recommendation algorithms.</p>
             <p>Refactored and debugged <strong>10,000+ lines of Python</strong>, improving training stability and runtime. Co-first author with a Peking University professor.</p>
-            <span class="pub">IEEE publication · co-first author</span>
+            <p class="paper">Published as <em>Understanding of Fake News Dissemination on Social Media by Comparing IPS, MF, NCF and BPR</em>, ICCECE 2023.</p>
+            <a class="pub" href="https://doi.org/10.1109/ICCECE58074.2023.10135245" target="_blank" rel="noopener">Read the paper on IEEE Xplore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
           </div>
           <div class="viz">
             <div class="viz-head"><span>SHARE CASCADE</span><span>illustration</span></div>
